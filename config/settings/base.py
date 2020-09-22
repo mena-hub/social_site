@@ -61,6 +61,7 @@ DJANGO_APPS = [
 ]
 THIRD_PARTY_APPS = [
     "crispy_forms",
+    "ckeditor",
     "allauth",
     "allauth.account",
     "allauth.socialaccount",
@@ -69,6 +70,7 @@ THIRD_PARTY_APPS = [
 LOCAL_APPS = [
     "social.users.apps.UsersConfig",
     # Your stuff: custom apps go here
+    "pages.apps.PagesConfig",
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
