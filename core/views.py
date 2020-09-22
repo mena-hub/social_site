@@ -3,6 +3,11 @@ from django.shortcuts import render
 
 class HomePageView(TemplateView):
     template_name = "core/home.html"
+    
+    def get_context_data(self, **kwargs):
+        context = super(HomePageView, self).get_context_data(**kwargs)
+        context['title'] = "Social"
+        return context
 
 class SamplePageView(TemplateView):
     template_name = "core/sample.html"
