@@ -10,7 +10,7 @@
             <div class="col-lg-8 mx-auto">
                 <h3 class="mb-4">{{ page.title }}</h3>
                 {{ page.content|striptags|safe|truncatechars:200 }}
-                <p><a href="#">
+                <p><a href="{% url 'page' page.id page.title|slugify %}">
                 <span><strong>Leer más</strong></span></a></p> 
             </div>
         </div>
