@@ -1,0 +1,52 @@
+html {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    position: relative;
+    margin: 0;
+    padding-bottom: 10rem;
+    min-height: 100%;
+    background: #fffefe;
+    font-family: 'Mulish', sans-serif;
+    color: #121211;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Raleway', sans-serif;
+}
+
+a {
+    color: #ee13b2;
+}
+a:hover, 
+a:focus, 
+a:active {
+    text-decoration: none;
+    outline: none;
+    color: #121211;
+}
+
+p {
+    line-height: 1.75;
+}
+
+#mainNav .navbar-nav .nav-item .nav-link:hover {
+    color: #ee13b2;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+footer .copyright {
+    color: #121211;
+}
