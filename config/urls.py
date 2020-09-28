@@ -4,6 +4,7 @@ from django.contrib import admin
 from django.urls import include, path
 from django.views import defaults as default_views
 from django.views.generic import TemplateView
+from pages.urls import pages_patterns
 
 urlpatterns = [
     path('', include('core.urls')),
@@ -15,7 +16,7 @@ urlpatterns = [
     path("users/", include("social.users.urls", namespace="users")),
     path("accounts/", include("allauth.urls")),
     # Your stuff: custom urls includes go here
-    path('pages/', include('pages.urls')),
+    path('pages/', include(pages_patterns)),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 if settings.DEBUG:
