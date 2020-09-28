@@ -13,3 +13,6 @@ class PageDetailView(DetailView):
 class PageCreateView(CreateView):
     model = Page
     fields = ['title', 'content', 'ordering']
+    
+    def get_success_url(self):
+        return reverse('pages:pages')
