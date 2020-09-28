@@ -12,7 +12,7 @@ html {
 body {
     position: relative;
     margin: 0;
-    padding-bottom: 10rem;
+    padding-bottom: 6rem;
     min-height: 100%;
     background: #fffefe;
     font-family: 'Mulish', sans-serif;
@@ -38,8 +38,30 @@ p {
     line-height: 1.75;
 }
 
+.page-main {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+.page-title {
+    border-bottom: 1px dashed #d1d1d1;
+    padding-bottom: 30px;
+    display: inline-block; 
+    text-align: center;
+    width: 100%;
+}
+.page-content {
+    border-bottom: 1px dashed #d1d1d1;
+}
+
+.navbar {
+    margin-bottom: 0px !important
+}
 #mainNav .navbar-nav .nav-item .nav-link:hover {
     color: #ee13b2;
+}
+
+textarea {
+    resize: none;
 }
 
 footer {
