@@ -60,8 +60,11 @@ p {
     color: #ee13b2;
 }
 
-textarea {
-    resize: none;
+.alert-light {
+    margin-bottom: 3rem;
+    border-radius: 1px;
+    border-color: #d1d1d1;
+    border-left: 5px solid #ee13b2;
 }
 
 footer {

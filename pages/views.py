@@ -13,7 +13,8 @@ class PageDetailView(DetailView):
 
 class PageCreateView(CreateView):
     model = Page
-    fields = ['title', 'content', 'ordering']
+    form_class = PageForm
+    #fields = ['title', 'content', 'ordering']
     success_url = reverse_lazy('pages:pages')
 
 class PageDeleteView(DeleteView):
