@@ -1,4 +1,6 @@
 from django.db import models
+from django.urls import reverse
+from django.utils.text import slugify
 from ckeditor import fields
 
 class Page(models.Model):
@@ -15,3 +17,9 @@ class Page(models.Model):
 
     def __str__(self):
         return self.title
+
+    def get_slug(self):
+        return slugify(self.title)
+
+    def get_absolute_url(self):
+        return reverse('pages:page', kwargs={'pk': self.id, 'slug': self.get_slug()})

@@ -1,7 +1,7 @@
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
 from django.views.generic.edit import CreateView, DeleteView, UpdateView
-from django.urls import reverse, reverse_lazy
+from django.urls import reverse_lazy
 from .models import Page
 from .forms import PageForm
 
@@ -27,4 +27,4 @@ class PageUpdateView(UpdateView):
     template_name_suffix = '_update_form'
 
     def get_success_url(self):
-        return reverse('pages:page', args=[self.object.id]) + '?ok'
+        return self.object.get_absolute_url() + '?ok'
