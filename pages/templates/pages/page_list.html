@@ -12,7 +12,7 @@
                 <h3 class="mb-4">{{ page.title }}</h3>
                 <div class="page-content">
                     <p>{{ page.content|striptags|safe|truncatechars:200 }}</p>
-                    <p><a href="{% url 'pages:page' page.id page.title|slugify %}">
+                    <p><a href="{% url 'pages:page' page.id %}">
                         <span><strong>Leer más</strong></span></a>
                     {% if request.user.is_staff %}
                         |<a href="{% url 'pages:update' page.id %}">
