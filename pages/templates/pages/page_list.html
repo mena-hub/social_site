@@ -8,12 +8,17 @@
 <main class="page-main" role="main">
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 mx-auto">
+            <div class="col-md-8 mx-auto">
                 <h3 class="mb-4">{{ page.title }}</h3>
                 <div class="page-content">
-                    {{ page.content|striptags|safe|truncatechars:200 }}
+                    <p>{{ page.content|striptags|safe|truncatechars:200 }}</p>
                     <p><a href="{% url 'pages:page' page.id page.title|slugify %}">
-                    <span><strong>Leer más</strong></span></a></p>
+                        <span><strong>Leer más</strong></span></a>
+                    {% if request.user.is_staff %}
+                        |<a href="{% url 'pages:delete' page.id %}">
+                            <span><strong>Eliminar</strong></span></a>
+                    {% endif %}
+                    </p>
                 </div>
             </div>
         </div>

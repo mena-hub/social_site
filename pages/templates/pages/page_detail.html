@@ -10,9 +10,13 @@
             <div class="col-lg-8 mx-auto">
                 <h3 class="mb-4">{{ page.title }}</h3>
                 <div>
-                {{ page.content|safe }}
+                    <p>{{ page.content|safe }}</p>
                     {% if request.user.is_staff %}
-                        <p><a href="#"><strong>Editar</strong></a></p> 
+                        <p><a href="#">
+                            <span><strong>Editar</strong></span></a>
+                        |<a href="{% url 'pages:delete' page.id %}">
+                            <span><strong>Eliminar</strong></span></a>
+                        </p> 
                     {% endif %}
                 </div>
             </div>
