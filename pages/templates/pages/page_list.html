@@ -15,6 +15,8 @@
                     <p><a href="{% url 'pages:page' page.id page.title|slugify %}">
                         <span><strong>Leer más</strong></span></a>
                     {% if request.user.is_staff %}
+                        |<a href="{% url 'pages:update' page.id %}">
+                            <span><strong>Editar</strong></span></a>
                         |<a href="{% url 'pages:delete' page.id %}">
                             <span><strong>Eliminar</strong></span></a>
                     {% endif %}
