@@ -75,3 +75,10 @@ footer {
 footer .copyright {
     color: #121211;
 }
+
+.django-ckeditor-widget, .cke_editor_id_content {
+    width: 100% !important;
+}
+.cke_bottom {
+    display: none !important;
+}
